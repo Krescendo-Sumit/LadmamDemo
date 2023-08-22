@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btnsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Using XML "
+        android:onClick="show"
+        ></Button>
+
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnsave1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seperate for Button "
+
+        ></Button>
+
+    <Button
+        android:id="@+id/btnsave2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Implements Onclick 1"
+
+        ></Button>
+    <Button
+        android:id="@+id/btnsave3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Implements Onclick 2 "
+
+        ></Button>
+</LinearLayout>
