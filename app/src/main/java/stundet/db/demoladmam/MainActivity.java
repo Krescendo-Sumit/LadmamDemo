@@ -2,6 +2,7 @@ package stundet.db.demoladmam;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         type3=findViewById(R.id.btnsave2);
         type4=findViewById(R.id.btnsave3);
         et_number=findViewById(R.id.et_number);
+
+        et_number.setText("0");
+        et_number.setBackgroundColor(Color.GRAY);
+        et_number.setTextColor(Color.GREEN);
+      //  et_number.setPadding(10,10,10,10);
         type3.setOnClickListener(this);
         type4.setOnClickListener(this);
 
