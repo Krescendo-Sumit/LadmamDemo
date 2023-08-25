@@ -6,8 +6,14 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
    TextView txt;
@@ -15,6 +21,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
    Button type3;
    Button type4;
    EditText et_number;
+   CheckBox checkBox;
+   Switch switch1;
+   ToggleButton tb;
+   RadioGroup rbg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         type3=findViewById(R.id.btnsave2);
         type4=findViewById(R.id.btnsave3);
         et_number=findViewById(R.id.et_number);
+        checkBox=findViewById(R.id.checkBox);
+        switch1=findViewById(R.id.switch1);
+        tb=findViewById(R.id.toggleButton);
+        rbg=findViewById(R.id.rbg);
 
         et_number.setText("0");
         et_number.setBackgroundColor(Color.GRAY);
@@ -47,6 +61,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                }
             }
         });
+
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                 txt.setText(""+isChecked);
+
+            }
+        });
+        tb.setTextOff("De-active");
+        tb.setTextOn("Active");
+        tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                txt.setText("Toggel Button : "+b+" "+tb.getText());
+            }
+        });
+
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                txt.setText("Switch : "+b);
+            }
+        });
+
+        rbg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int selcetdRadioButtonId) {
+                txt.setText(""+selcetdRadioButtonId);
+                RadioButton r=findViewById(selcetdRadioButtonId);
+                switch (selcetdRadioButtonId)
+                {
+                    case R.id.radioButton:
+                           if(r.isChecked())
+                               txt.setText("Male");
+                        break;
+                    case R.id.radioButton2:
+                        if(r.isChecked())
+                            txt.setText("Female");
+                        break;
+                }
+            }
+        });
+
 
     }
     public void show(View v)

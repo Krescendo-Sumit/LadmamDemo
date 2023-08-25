@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center|top"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -17,26 +18,25 @@
         android:id="@+id/btnsave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Using XML "
         android:onClick="show"
-        ></Button>
+        android:text="Using XML "></Button>
 
     <EditText
         android:id="@+id/et_number"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="136dp"
+        android:layout_marginLeft="50dp"
         android:ems="10"
-        android:inputType="text"
-        android:maxLength="4"
+        android:gravity="top"
         android:hint="Enter Number"
-        android:textColor="#000400"
+        android:inputType="textMultiLine|text"
+        android:maxLength="4"
         android:padding="20dp"
         android:paddingLeft="10dp"
-        android:layout_marginLeft="50dp"
+        android:textColor="#000400"
         android:textSize="20sp"
-        android:textStyle="bold | italic"
 
-        />
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/btnsave1"
@@ -53,6 +53,7 @@
         android:text="Implements Onclick 1"
 
         ></Button>
+
     <Button
         android:id="@+id/btnsave3"
         android:layout_width="wrap_content"
@@ -60,4 +61,41 @@
         android:text="Implements Onclick 2 "
 
         ></Button>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Switch" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton" />
+
+    <RadioGroup
+        android:id="@+id/rbg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+    </RadioGroup>
+
 </LinearLayout>
